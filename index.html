@@ -9,6 +9,10 @@
 </head>
 
 <body>
+
+
+
+
     <conversations-el></conversations-el>
 
 
@@ -22,8 +26,7 @@
   .container {
       margin:0 auto;
       width:595px;
-      padding:20px;
-      border:1px solid black;
+     
       }
         .d-flex {
           display: flex;
@@ -35,83 +38,98 @@
             line-height:1.2rem;
             padding:8px 0;
           }
+            .text-center {
+  text-align: center;
+}
+
+.mt-4{
+margin-top: 20px;}
+
+.a4 {
+ padding:20px;
+      border:1px solid black;}
   `]
             static get properties() {
                 return {
-                    topic: {
+                    data: {
                         type: Object
                     }
                 };
             }
             constructor() {
                 super();
-                this.topic = [
+                this.data = [
                     {
-                        name: "OFFICIAL",
-                        sentence: "Hello  __1__  information center, Mike speaking, how can I help you?"
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "Hi, I __2__ to find out about  __3__  classes. I believe there are some one-day classes for tourist?"
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "Well, __4__ open for everyone, but tourist are always welcome. Ok, let me give you some details of __5__ available. There are several classes. One very popular one __6__ Food Studio."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "OK"
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "They focus on __7__ product, __8__ you how to cook them __9__ show you how to choose them."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "Right, that sounds good, how big __10__ the classes?"
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "I’m not sure exactly, but __11__ quite small."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "And could I get the __12__ there?"
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "I think so … let me check, yes, they do __13__. __14__ in fact most of people who __15__ classes __16__ getting __17__ another."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "I suppose __18__ must be yes."
-                    }, {
-                        name: "OFFICIAL",
-                        sentence: "And this company has a special deal for client where they __19__ 20% if you return __20__ further class."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "OK. But you __21__ classes?"
-                    }, {
-                        name: "OFFICIAL",
-                        sentence: "That’s right. Another one you might be interested in is __22__ school. __23__. They just opened six month ago but I __24__ heard __25__ about them. They concentrate __26__ teaching __27__ prepare how __28__ food and they __29__."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "So __30__ food for __31__ on a diet thinks like that, I don’t know __32__ be interested __33__ that."
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "Well, I don’t think  __34__ focus on __35__ diet __36__ It’s more to do with recipe __37__ specific __38__ like including ingredients __39__ bones and make them stronger that’s __40__ thing."
-                    },
-                    {
-                        name: "WOMAN",
-                        sentence: "I see, well,  I might be interested in  I am not sure, do __41__ have websites I could __42__"
-                    },
-                    {
-                        name: "OFFICIAL",
-                        sentence: "Yes just key in a name of school. __43__ And if you want more about them every Thursday  __44__ __45__ lecture at school it’s free you don’t __46__ book __47__ anything just turn __48__ and __49__ give you __50__ you want to __51__ class."
-                    },
+                        id: 1,
+                        topic: 'cookery-class',
+                        audio: '/public/assets/audio/cookery-class.m4a',
+                        dialogue: [{
+                            name: "OFFICIAL",
+                            sentence: "Hello  __1__  information center, Mike speaking, how can I help you?"
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "Hi, I __2__ to find out about  __3__  classes. I believe there are some one-day classes for tourist?"
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "Well, __4__ open for everyone, but tourist are always welcome. Ok, let me give you some details of __5__ available. There are several classes. One very popular one __6__ Food Studio."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "OK"
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "They focus on __7__ product, __8__ you how to cook them __9__ show you how to choose them."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "Right, that sounds good, how big __10__ the classes?"
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "I’m not sure exactly, but __11__ quite small."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "And could I get the __12__ there?"
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "I think so … let me check, yes, they do __13__. __14__ in fact most of people who __15__ classes __16__ getting __17__ another."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "I suppose __18__ must be yes."
+                        }, {
+                            name: "OFFICIAL",
+                            sentence: "And this company has a special deal for client where they __19__ 20% if you return __20__ further class."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "OK. But you __21__ classes?"
+                        }, {
+                            name: "OFFICIAL",
+                            sentence: "That’s right. Another one you might be interested in is __22__ school. __23__. They just opened six month ago but I __24__ heard __25__ about them. They concentrate __26__ teaching __27__ prepare how __28__ food and they __29__."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "So __30__ food for __31__ on a diet thinks like that, I don’t know __32__ be interested __33__ that."
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "Well, I don’t think  __34__ focus on __35__ diet __36__ It’s more to do with recipe __37__ specific __38__ like including ingredients __39__ bones and make them stronger that’s __40__ thing."
+                        },
+                        {
+                            name: "WOMAN",
+                            sentence: "I see, well,  I might be interested in  I am not sure, do __41__ have websites I could __42__"
+                        },
+                        {
+                            name: "OFFICIAL",
+                            sentence: "Yes just key in a name of school. __43__ And if you want more about them every Thursday  __44__ __45__ lecture at school it’s free you don’t __46__ book __47__ anything just turn __48__ and __49__ give you __50__ you want to __51__ class."
+                        },]
+                    }
                 ];
             }
 
@@ -125,11 +143,19 @@
                 }
             }
             render() {
+
+                const current = this.data.find(d => d.id === 1)
                 return html`
-   
-<div class="container">
+   <div class="container text-center">
+     <audio controls preload="none" style="width:480px;">
+        <source src="${current.audio}" type="audio/mp4" />
+        <p>Your browser does not support HTML5 audio.</p>
+    </audio>
+    </div>
+<div class="container a4 mt-4">
+       
     <ul class="dialogue">
-      ${this.topic.map((d) => {
+      ${current.dialogue.map((d) => {
                     return html`
           <li class="d-flex">
             <span class="name" style="flex-basis:100px;flex-shrink:0;">${this.upperCase(d.name)}:</span>
